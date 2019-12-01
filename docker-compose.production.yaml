@@ -2,17 +2,14 @@ version: '3'
 services:
   
   app:
-    image: chmelovar-landing:latest
-    build: .
-    command: /start-reload.sh
+    image: tomasbedrich/chmelovar-landing:latest
     restart: always
-    volumes:
-      - ./app:/app
     ports:
-      - 8080:80
+      - 5001:80 # matches Apache reverse proxy
     environment:
       - APP_SENDGRID_API_KEY
       - APP_MONGO_CONNECTION_STRING
+      - APP_FORCE_HTTPS=1
     depends_on:
       - mongo
 
@@ -29,7 +26,7 @@ services:
     image: mongo-express:latest
     restart: always
     ports:
-      - 8081:8081
+      - 127.0.0.1:5052:8081
     environment:
       - ME_CONFIG_MONGODB_ADMINUSERNAME
       - ME_CONFIG_MONGODB_ADMINPASSWORD

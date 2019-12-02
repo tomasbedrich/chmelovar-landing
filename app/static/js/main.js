@@ -11,6 +11,10 @@ $(function() {
 
         var xhr = new XMLHttpRequest();
 
+        var success = function(event) {
+            $("#subscribeFormWrapper").html('<p class="alert alert-success">Děkujeme, brzy se ozveme a uvaříme spolu to nejlepší pivo!</p>');
+            dataLayer.push({'event': 'form', 'action': 'submit', 'label': 'subscribe'});
+        };
         var fail = function(event) {
             if (xhr.status == 422) {
                 $("#subscribeFormMessage").html('<p class="mt-20 alert alert-danger">Jejda, potřebujeme správnou e&#8209;mailovou adresu.</p>');
@@ -24,11 +28,20 @@ $(function() {
                 fail(event);
                 return;
             }
-            $("#subscribeFormWrapper").html('<p class="alert alert-success">Děkujeme, brzy se ozveme a uvaříme spolu to nejlepší pivo!</p>');
+            success(event);
         });
       
         xhr.open(form.attr("method"), form.attr("action"));
         xhr.send(data);
+    });
+
+    //===== CTA button tracking
+
+    $("#ctaMain").on("click", function(e) {
+        dataLayer.push({'event': 'cta', 'action': 'click', 'label': 'main'});
+    });
+    $("#ctaPrice").on("click", function(e) {
+        dataLayer.push({'event': 'cta', 'action': 'click', 'label': 'price'});
     });
 
 
@@ -41,6 +54,10 @@ $(function() {
 
         var xhr = new XMLHttpRequest();
 
+        var success = function(event) {
+            $("#contact-form").html('<p class="alert alert-success">Děkujeme za zprávu, brzy se ti ozveme.</p>');
+            dataLayer.push({'event': 'form', 'action': 'submit', 'label': 'contact'});
+        };
         var fail = function(event) {
             if (xhr.status == 422) {
                 $("#contact-form-message").html('<p class="alert alert-danger">Jejda, prosím vyplň všechna pole a zkontroluj e&#8209;mailovou adresu.</p>');
@@ -54,7 +71,7 @@ $(function() {
                 fail(event);
                 return;
             }
-            $("#contact-form").html('<p class="alert alert-success">Děkujeme za zprávu, brzy se ti ozveme.</p>');
+            success(event);
         });
       
         xhr.open(form.attr("method"), form.attr("action"));

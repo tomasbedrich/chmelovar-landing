@@ -13,7 +13,9 @@
     <title>Chmelovar - Vytvoř si vlastní pivo</title>
 
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script>
+    dataLayer = [];
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -117,7 +119,7 @@
                                         <h2 class="carousel-title mb-4">Vytvoř si vlastní&nbsp;pivo</h2>
                                         <p class="carousel-description my-2">Ležák, IPA, Pšenice. Zvol si chmel, uprav recepturu.<br>Na co máš dnes chuť?</p>
                                         <ul class="carousel-btn rounded-buttons">
-                                            <li><button class="main-btn rounded-three" data-toggle="modal" data-target="#fakedoorModal" id="fakedoorModalButton">CHCI VLASTNÍ PIVO</button></li>
+                                            <li><button class="main-btn rounded-three" data-toggle="modal" data-target="#fakedoorModal" id="ctaMain">CHCI VLASTNÍ PIVO</button></li>
                                         </ul>
                                     </div>
                                 </div> <!-- row -->
@@ -211,7 +213,7 @@
             </div> <!-- row -->
             <div class="row justify-content-center">
                 <div class="col-lg-7 text-center rounded-buttons">
-                    <button class="main-btn rounded-three" data-toggle="modal" data-target="#fakedoorModal">Kolik zaplatím?</button>
+                    <button class="main-btn rounded-three" data-toggle="modal" data-target="#fakedoorModal" id="ctaPrice">Kolik zaplatím?</button>
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->

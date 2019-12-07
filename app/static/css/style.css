@@ -2116,15 +2116,12 @@ p {
       background-color: #f28e1c; }
 
 /*===========================
-       25.CLIENT css 
+       25.PARTNER css 
 ===========================*/
-/*===== Client Logo Two =====*/
-.client-logo-area {
+
+.partner-logo-area {
   padding-top: 80px;
   padding-bottom: 80px; }
-
-.client-logo-2 {
-  background-color: #f4f6f7; }
 
 /*===========================
        21.BLOG css 

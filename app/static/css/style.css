@@ -196,10 +196,13 @@ p {
       font-size: 30px;
       line-height: 35px; } }
 .section-title .text {
-  font-size: 16px;
-  line-height: 24px;
-  color: #6c6c6c;
-  margin-top: 24px; }
+  font-size: 20px;
+  line-height: 25px;
+  color: #121212;
+  margin-top: 8px; }
+  @media (max-width: 767px) {
+    .section-title .text {
+      font-size: 16px; } }
 
 /*===== All Preloader Style =====*/
 .preloader {
@@ -1756,7 +1759,9 @@ p {
 ===========================*/
 .pricing-area {
   padding-top: 90px;
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+  background-color: #f4f6f7;
+}
 
 .pricing-2 {
   background-color: #fff; }
@@ -2175,7 +2180,7 @@ p {
 .contact-area {
   padding-top: 95px;
   padding-bottom: 100px;
-  background-color: #f4f6f7; }
+}
 
 .form-message.error, .form-message.success {
   font-size: 16px;
@@ -2291,9 +2296,12 @@ p {
 /*===========================
     22.HEADER css 
 ===========================*/
+.footer-area {
+  background-color: #f4f6f7;
+}
 .footer-area .footer-widget {
   padding-top: 90px;
-  padding-bottom: 120px; }
+  padding-bottom: 120px;}
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .footer-area .footer-widget {
       padding-top: 70px;

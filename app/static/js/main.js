@@ -40,6 +40,9 @@ $(function() {
     $("#ctaMain").on("click", function(e) {
         dataLayer.push({'event': 'cta', 'action': 'click', 'label': 'main'});
     });
+    $("#ctaPartners").on("click", function(e) {
+        dataLayer.push({'event': 'cta', 'action': 'click', 'label': 'partners'});
+    });
     $("#ctaPrice").on("click", function(e) {
         dataLayer.push({'event': 'cta', 'action': 'click', 'label': 'price'});
     });

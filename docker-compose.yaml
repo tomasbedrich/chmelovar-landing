@@ -13,6 +13,9 @@ services:
     environment:
       - APP_SENDGRID_API_KEY
       - APP_MONGO_CONNECTION_STRING
+      - APP_SENTRY_DSN
+      - APP_SENTRY_ENVIRONMENT=dev
+      - WEB_CONCURRENCY=1
     depends_on:
       - mongo
 

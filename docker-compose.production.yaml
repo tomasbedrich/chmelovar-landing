@@ -9,7 +9,10 @@ services:
     environment:
       - APP_SENDGRID_API_KEY
       - APP_MONGO_CONNECTION_STRING
+      - APP_SENTRY_DSN
+      - APP_SENTRY_ENVIRONMENT=production
       - APP_FORCE_HTTPS=1
+      - APP_DISABLE_DOCS=1
     depends_on:
       - mongo
 

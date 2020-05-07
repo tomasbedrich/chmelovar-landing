@@ -12,6 +12,7 @@ services:
       - APP_SENTRY_DSN
       - APP_SENTRY_ENVIRONMENT=production
       - APP_DISABLE_DOCS=1
+      - FORWARDED_ALLOW_IPS=* # this is safe behind reverse proxy
     depends_on:
       - mongo
 

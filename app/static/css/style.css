@@ -17,7 +17,6 @@ brand lighter: rgba(242, 142, 28, 1.0); #f28e1c
   font-size: 3em !important;
   line-height: 1em !important;
   text-shadow: 0 0 4px black;
-  -webkit-text-stroke: 1px black;
 }
 @media only screen and (min-width: 768px) {
   .slider-area .carousel-title {

@@ -5,7 +5,7 @@ services:
     image: tomasbedrich/chmelovar-landing:latest
     restart: always
     ports:
-      - 5001:80 # matches Apache reverse proxy
+      - 127.0.0.1:5001:80 # matches Apache reverse proxy
     environment:
       - APP_SENDGRID_API_KEY
       - APP_MONGO_CONNECTION_STRING
@@ -24,12 +24,3 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME
       - MONGO_INITDB_ROOT_PASSWORD
-
-  mongo-express:
-    image: mongo-express:latest
-    restart: always
-    ports:
-      - 127.0.0.1:5052:8081
-    environment:
-      - ME_CONFIG_MONGODB_ADMINUSERNAME
-      - ME_CONFIG_MONGODB_ADMINPASSWORD
